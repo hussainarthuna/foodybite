@@ -12,18 +12,19 @@ import MainButton from '../components/MainButton';
 import TextButton from '../components/TextButton';
 import Logo from '../components/Logo';
 import Input from '../components/Input';
+import {Colors} from '../constants/Colors';
 
-StatusBar.setBackgroundColor("rgba(0,0,0,0)");
-StatusBar.setBarStyle("light-content");
+StatusBar.setBackgroundColor('rgba(0,0,0,0)');
+StatusBar.setBarStyle('light-content');
 StatusBar.setTranslucent(true);
 
 const LoginPage = props => {
 
-    useEffect(()=>{
-        StatusBar.setBackgroundColor("rgba(0,0,0,0)");
-        StatusBar.setBarStyle("light-content");
+    useEffect(() => {
+        StatusBar.setBackgroundColor('rgba(0,0,0,0)');
+        StatusBar.setBarStyle('light-content');
         StatusBar.setTranslucent(true);
-    },[]);
+    }, []);
 
     return (
         <ImageBackground
@@ -43,12 +44,17 @@ const LoginPage = props => {
                             <Input placeholder='Password' secureTextEntry iconName='ios-key'/>
                             <View style={styles.forgotPassword}>
                                 <TextButton title='Forgot Password ?'
-                                            onPress={() => props.navigation.navigate('ForgotPassword')}/>
+                                            onPress={() => props.navigation.navigate('ForgotPassword')}
+                                            color={Colors.light}
+                                            fontSize={16}
+                                />
                             </View>
                         </View>
                         <MainButton title='Login' onPress={() => props.navigation.navigate('App')}/>
                         <TextButton title='Create a new account'
-                                    onPress={() => props.navigation.navigate('Register')}/>
+                                    onPress={() => props.navigation.navigate('Register')}
+                                    color={Colors.light}
+                                    fontSize={16}/>
                     </View>
                 </KeyboardAvoidingView>
             </TouchableWithoutFeedback>

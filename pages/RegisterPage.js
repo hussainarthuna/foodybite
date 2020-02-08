@@ -13,9 +13,10 @@ import {Icon} from 'native-base';
 import Input from '../components/Input';
 import MainButton from '../components/MainButton';
 import TextButton from '../components/TextButton';
+import {Colors} from '../constants/Colors';
 
-StatusBar.setBackgroundColor("rgba(0,0,0,0)");
-StatusBar.setBarStyle("light-content");
+StatusBar.setBackgroundColor('rgba(0,0,0,0)');
+StatusBar.setBarStyle('light-content');
 StatusBar.setTranslucent(true);
 
 const RegisterPage = props => {
@@ -40,7 +41,9 @@ const RegisterPage = props => {
                         <MainButton title='Register' onPress={() => props.navigation.navigate('App')}/>
                     </View>
                     <View style={styles.container}>
-                        <TextButton title='Already have an account ?' onPress={() => props.navigation.goBack()}/>
+                        <TextButton title='Already have an account ?' onPress={() => props.navigation.goBack()}
+                                    color={Colors.light}
+                                    fontSize={16}/>
                     </View>
                 </KeyboardAvoidingView>
             </TouchableWithoutFeedback>

@@ -25,8 +25,12 @@ import {
     ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import AppNavigator from './navigation/AppNavigator';
-StatusBar.setBackgroundColor("rgba(0,0,0,0)");
-StatusBar.setBarStyle("light-content");
+import {enableScreens} from 'react-native-screens';
+
+enableScreens();
+
+StatusBar.setBackgroundColor('rgba(0,0,0,0)');
+StatusBar.setBarStyle('light-content');
 StatusBar.setTranslucent(true);
 const App = () => {
     return (

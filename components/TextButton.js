@@ -9,7 +9,7 @@ const TextButton = props => {
             activeOpacity={0.8}
             onPress={props.onPress}
         >
-            <Text style={styles.text}>{props.title}</Text>
+            <Text style={{...styles.text, color: props.color, fontSize: props.fontSize}}>{props.title}</Text>
         </TouchableOpacity>
     );
 };
@@ -17,8 +17,6 @@ const TextButton = props => {
 const styles = StyleSheet.create({
     button: {},
     text: {
-        color: Colors.light,
-        fontSize: 16,
         fontFamily: 'OpenSans-SemiBold',
     },
 });
