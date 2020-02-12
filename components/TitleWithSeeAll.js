@@ -15,7 +15,9 @@ const TitleWithSeeAll = props => {
             </Left>
             <Right>
                 <TextButton title={seeAll} color={Colors.tertiary}
-                            fontSize={12}/>
+                            fontSize={12}
+                            onPress={props.onPress}
+                />
             </Right>
         </ListItem>
     );

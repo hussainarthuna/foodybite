@@ -9,17 +9,17 @@ const CustomHeader = props => {
 
     return (
         <Header androidStatusBarColor='#fff' style={styles.header}>
-            <Left style={{flex:1}}>
+            <Left style={{flex: 1}}>
                 {
                     isHome ?
                         null
                         :
-                        <Button style={styles.icon}  transparent onPress={() => props.navigation.goBack()}>
-                            <Icon name='arrow-back'/>
+                        <Button transparent onPress={() => props.navigation.goBack()}>
+                            <Icon style={styles.icon} name='arrow-back'/>
                         </Button>
                 }
             </Left>
-            <Body style={{flex: 3,alignItems:'center'}}>
+            <Body style={{flex: 3, alignItems: 'center'}}>
                 <Title style={styles.title}>{title}</Title>
             </Body>
             <Right>
@@ -36,14 +36,14 @@ const styles = StyleSheet.create({
         // marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
         backgroundColor: '#fff',
     },
-    title:{
-        color:Colors.dark,
-        fontFamily:'OpenSans-SemiBold',
-        textAlign:'center'
+    title: {
+        color: Colors.dark,
+        fontFamily: 'OpenSans-SemiBold',
+        textAlign: 'center',
     },
-    icon:{
-        color:Colors.dark,
-    }
+    icon: {
+        color: Colors.dark,
+    },
 });
 
 export default CustomHeader;

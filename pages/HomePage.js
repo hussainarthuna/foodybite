@@ -32,7 +32,8 @@ const HomePage = props => {
 
                 <View style={styles.trendingRestaurantsBlock}>
                     <View style={styles.title}>
-                        <TitleWithSeeAll title='Trending Restaurants' seeAllCount={12}/>
+                        <TitleWithSeeAll title='Trending Restaurants' seeAllCount={12}
+                                         onPress={() => props.navigation.navigate('TrendingRestaurants')}/>
                     </View>
                     <Carousel
                         data={RestaurantData}

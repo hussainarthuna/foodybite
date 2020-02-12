@@ -12,6 +12,7 @@ import NotificationsPage from '../pages/NotificationsPage';
 import ProfilePage from '../pages/ProfilePage';
 import {Colors} from '../constants/Colors';
 import {Icon} from 'native-base';
+import TrendingRestaurantsPage from '../pages/TrendingRestaurantsPage';
 
 const navOptionsHandler = (navigation) => ({
     headerShown: false,
@@ -23,8 +24,8 @@ const TabNavigator = createBottomTabNavigator({
         navigationOptions: {
             tabBarLabel: 'Home',
             tabBarIcon: ({tintColor}) => {
-                return <Icon name='home' type='AntDesign' fontSize={25} style={{color:tintColor}}/>
-            }
+                return <Icon name='home' type='AntDesign' fontSize={25} style={{color: tintColor}}/>;
+            },
         },
     },
     Favorites: {
@@ -32,8 +33,8 @@ const TabNavigator = createBottomTabNavigator({
         navigationOptions: {
             // tabBarLabel: 'Favorites',
             tabBarIcon: ({tintColor}) => {
-                return <Icon name='bookmark-o' type='FontAwesome' fontSize={25} style={{color:tintColor}}/>
-            }
+                return <Icon name='bookmark-o' type='FontAwesome' fontSize={25} style={{color: tintColor}}/>;
+            },
         },
     },
     Notifications: {
@@ -41,8 +42,8 @@ const TabNavigator = createBottomTabNavigator({
         navigationOptions: {
             // tabBarLabel: 'Notifications',
             tabBarIcon: ({tintColor}) => {
-                return <Icon name='notifications-none' type='MaterialIcons' fontSize={25} style={{color:tintColor}}/>
-            }
+                return <Icon name='notifications-none' type='MaterialIcons' fontSize={25} style={{color: tintColor}}/>;
+            },
         },
     },
     Profile: {
@@ -50,8 +51,8 @@ const TabNavigator = createBottomTabNavigator({
         navigationOptions: {
             // tabBarLabel: 'Profile',
             tabBarIcon: ({tintColor}) => {
-                return <Icon name='person-outline' type='MaterialIcons' fontSize={25} style={{color:tintColor}}/>
-            }
+                return <Icon name='person-outline' type='MaterialIcons' fontSize={25} style={{color: tintColor}}/>;
+            },
         },
     },
 }, {
@@ -64,6 +65,10 @@ const TabNavigator = createBottomTabNavigator({
 const MainStack = createStackNavigator({
     Tabs: {
         screen: TabNavigator,
+        navigationOptions: navOptionsHandler,
+    },
+    TrendingRestaurants: {
+        screen: TrendingRestaurantsPage,
         navigationOptions: navOptionsHandler,
     },
 });
