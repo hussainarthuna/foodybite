@@ -1,6 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
+import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
 import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
 import WelcomePage from '../pages/WelcomePage';
@@ -15,6 +16,8 @@ import {Icon} from 'native-base';
 import TrendingRestaurantsPage from '../pages/TrendingRestaurantsPage';
 import AllCategoriesPage from '../pages/AllCategoriesPage';
 import CategoryRestaurantsPage from '../pages/CategoryRestaurantPage';
+import {Transition} from 'react-native-reanimated';
+
 
 const navOptionsHandler = (navigation) => ({
     headerShown: false,
@@ -123,12 +126,29 @@ const authStack = createStackNavigator({
     },
 });
 
-const appNavigator = createSwitchNavigator({
+// const appNavigator = createSwitchNavigator({
+//     Splash: welcomeStack,
+//     Auth: authStack,
+//     App: MainStack,
+// }, {
+//     initialRouteName: 'Splash',
+// });
+const appNavigator = createAnimatedSwitchNavigator({
     Splash: welcomeStack,
     Auth: authStack,
     App: MainStack,
 }, {
     initialRouteName: 'Splash',
+    transition: (
+        <Transition.Together>
+            {/*<Transition.Out*/}
+            {/*    type="slide-top"*/}
+            {/*    durationMs={400}*/}
+            {/*    interpolation="easeIn"*/}
+            {/*/>*/}
+            <Transition.In type="fade" durationMs={500}/>
+        </Transition.Together>
+    ),
 });
 
 export default createAppContainer(appNavigator);
