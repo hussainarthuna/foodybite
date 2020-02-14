@@ -13,6 +13,8 @@ import ProfilePage from '../pages/ProfilePage';
 import {Colors} from '../constants/Colors';
 import {Icon} from 'native-base';
 import TrendingRestaurantsPage from '../pages/TrendingRestaurantsPage';
+import AllCategoriesPage from '../pages/AllCategoriesPage';
+import CategoryRestaurantsPage from '../pages/CategoryRestaurantPage';
 
 const navOptionsHandler = (navigation) => ({
     headerShown: false,
@@ -69,6 +71,14 @@ const MainStack = createStackNavigator({
     },
     TrendingRestaurants: {
         screen: TrendingRestaurantsPage,
+        navigationOptions: navOptionsHandler,
+    },
+    AllCategories: {
+        screen: AllCategoriesPage,
+        navigationOptions: navOptionsHandler,
+    },
+    CategoryRestaurant: {
+        screen: CategoryRestaurantsPage,
         navigationOptions: navOptionsHandler,
     },
 });

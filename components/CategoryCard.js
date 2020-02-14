@@ -4,8 +4,9 @@ import {Colors} from '../constants/Colors';
 
 const CategoryCard = props => {
     return (
-        <TouchableOpacity activeOpacity={0.8}>
-            <ImageBackground style={styles.image} source={props.image} borderRadius={15} resizeMethod='resize'>
+        <TouchableOpacity activeOpacity={0.8} onPress={props.onPress}>
+            <ImageBackground style={{...styles.image, ...props.style}} source={props.image} borderRadius={15}
+                             resizeMethod='resize'>
                 <Text style={styles.text}>{props.title}</Text>
             </ImageBackground>
         </TouchableOpacity>

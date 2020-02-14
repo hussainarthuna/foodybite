@@ -45,12 +45,22 @@ const HomePage = props => {
 
                 <View style={styles.categoryBlock}>
                     <View style={styles.title}>
-                        <TitleWithSeeAll title='Category' seeAllCount={8}/>
+                        <TitleWithSeeAll title='Category' seeAllCount={8}
+                                         onPress={() => props.navigation.navigate('AllCategories')}/>
                     </View>
                     <View style={styles.categoryContainer}>
-                        <CategoryCard title='Italian' image={require('../assets/images/italian.png')}/>
-                        <CategoryCard title='Indian' image={require('../assets/images/indian.png')}/>
-                        <CategoryCard title='Chinese' image={require('../assets/images/chinese.png')}/>
+                        <CategoryCard title='Italian' image={require('../assets/images/italian.png')}
+                                      onPress={() => props.navigation.navigate('CategoryRestaurant', {
+                                          restaurantName: 'Italian',
+                                      })}/>
+                        <CategoryCard title='Indian' image={require('../assets/images/indian.png')}
+                                      onPress={() => props.navigation.navigate('CategoryRestaurant', {
+                                          restaurantName: 'Indian',
+                                      })}/>
+                        <CategoryCard title='Chinese' image={require('../assets/images/chinese.png')}
+                                      onPress={() => props.navigation.navigate('CategoryRestaurant', {
+                                          restaurantName: 'Chinese',
+                                      })}/>
                     </View>
                 </View>
 
