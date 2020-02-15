@@ -5,9 +5,9 @@ import Logo from '../components/Logo';
 const WelcomePage = props => {
 
     useEffect(() => {
-        setTimeout(()=>{
+        setTimeout(() => {
             props.navigation.navigate('Auth');
-        },600);
+        }, 1000);
     }, []);
 
     return (
