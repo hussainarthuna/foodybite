@@ -23,6 +23,7 @@ import SettingsPage from '../pages/SettingsPage';
 import ChangePasswordPage from '../pages/ChangePasswordPage';
 import ChangeLanguagePage from '../pages/ChangeLanguagePage';
 import UserReviewsPage from '../pages/UserReviewsPage';
+import EditProfilePage from '../pages/EditProfilePage';
 
 
 const navOptionsHandler = (navigation) => ({
@@ -112,6 +113,10 @@ const MainStack = createStackNavigator({
     },
     ChangeLanguage: {
         screen: ChangeLanguagePage,
+        navigationOptions: navOptionsHandler,
+    },
+    EditProfile: {
+        screen: EditProfilePage,
         navigationOptions: navOptionsHandler,
     },
 });

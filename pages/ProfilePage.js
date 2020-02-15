@@ -43,7 +43,7 @@ const ProfilePage = props => {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.functionBtnContainer}>
-                    <Button style={styles.PrimaryBtn}>
+                    <Button style={styles.PrimaryBtn} onPress={() => props.navigation.navigate('EditProfile')}>
                         <Text>Edit Profile</Text>
                     </Button>
                     <Button style={styles.SecondaryBtn} onPress={() => props.navigation.navigate('Settings')}>

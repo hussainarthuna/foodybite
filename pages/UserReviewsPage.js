@@ -16,7 +16,7 @@ const UserReviewsPage = props => {
                         return (
                             <ListItem avatar>
                                 <Left>
-                                    <Thumbnail source={data.image}/>
+                                    <Thumbnail style={{borderRadius: 5}} square source={data.image}/>
                                 </Left>
                                 <Body>
                                     <Text>{data.name}</Text>
@@ -43,7 +43,7 @@ const UserReviewsPage = props => {
                         return (
                             <ListItem avatar>
                                 <Left>
-                                    <Thumbnail source={data.image}/>
+                                    <Thumbnail style={{borderRadius: 5}} square source={data.image}/>
                                 </Left>
                                 <Body>
                                     <Text>{data.name}</Text>
@@ -70,7 +70,7 @@ const UserReviewsPage = props => {
                         return (
                             <ListItem avatar>
                                 <Left>
-                                    <Thumbnail source={data.image}/>
+                                    <Thumbnail style={{borderRadius: 5}} square source={data.image}/>
                                 </Left>
                                 <Body>
                                     <Text>{data.name}</Text>
