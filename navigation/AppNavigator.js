@@ -17,6 +17,8 @@ import TrendingRestaurantsPage from '../pages/TrendingRestaurantsPage';
 import AllCategoriesPage from '../pages/AllCategoriesPage';
 import CategoryRestaurantsPage from '../pages/CategoryRestaurantPage';
 import {Transition} from 'react-native-reanimated';
+import FollowersPage from '../pages/FollowersPage';
+import FollowingsPage from '../pages/FollowingsPage';
 
 
 const navOptionsHandler = (navigation) => ({
@@ -82,6 +84,14 @@ const MainStack = createStackNavigator({
     },
     CategoryRestaurant: {
         screen: CategoryRestaurantsPage,
+        navigationOptions: navOptionsHandler,
+    },
+    Followers: {
+        screen: FollowersPage,
+        navigationOptions: navOptionsHandler,
+    },
+    Followings: {
+        screen: FollowingsPage,
         navigationOptions: navOptionsHandler,
     },
 });

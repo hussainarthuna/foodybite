@@ -5,7 +5,6 @@ import {Colors} from '../constants/Colors';
 import {RestaurantData} from '../data/RestaurantData';
 import RestaurantCard from '../components/RestaurantCard';
 import {Text, Button} from 'native-base';
-import MainButton from '../components/MainButton';
 
 const ProfilePage = props => {
 
@@ -31,11 +30,13 @@ const ProfilePage = props => {
                         <Text style={styles.count}>239</Text>
                         <Text style={styles.countForName} note>Reviews</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.followersCount}>
+                    <TouchableOpacity style={styles.followersCount}
+                                      onPress={() => props.navigation.navigate('Followers')}>
                         <Text style={styles.count}>1000</Text>
                         <Text style={styles.countForName} note>Followers</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.followingsCount}>
+                    <TouchableOpacity style={styles.followingsCount}
+                                      onPress={() => props.navigation.navigate('Followings')}>
                         <Text style={styles.count}>340</Text>
                         <Text style={styles.countForName} note>Followings</Text>
                     </TouchableOpacity>
@@ -95,9 +96,6 @@ const styles = StyleSheet.create({
     },
     followersCount: {
         alignItems: 'center',
-        // borderLeftWidth:1,
-        // borderRightWidth:1,
-        // paddingHorizontal:16
     },
     followingsCount: {
         alignItems: 'center',
