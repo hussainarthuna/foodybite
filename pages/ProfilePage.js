@@ -26,7 +26,8 @@ const ProfilePage = props => {
                     <Text style={styles.email} note>johnwick@gmail.com</Text>
                 </View>
                 <View style={styles.statsContainer}>
-                    <TouchableOpacity style={styles.reviewsCount}>
+                    <TouchableOpacity style={styles.reviewsCount}
+                                      onPress={() => props.navigation.navigate('UserReviews')}>
                         <Text style={styles.count}>239</Text>
                         <Text style={styles.countForName} note>Reviews</Text>
                     </TouchableOpacity>
@@ -45,7 +46,7 @@ const ProfilePage = props => {
                     <Button style={styles.PrimaryBtn}>
                         <Text>Edit Profile</Text>
                     </Button>
-                    <Button androidRippleColor={Colors.primary} style={styles.SecondaryBtn}>
+                    <Button style={styles.SecondaryBtn} onPress={() => props.navigation.navigate('Settings')}>
                         <Text style={styles.BtnText}>Settings</Text>
                     </Button>
                 </View>

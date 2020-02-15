@@ -19,6 +19,10 @@ import CategoryRestaurantsPage from '../pages/CategoryRestaurantPage';
 import {Transition} from 'react-native-reanimated';
 import FollowersPage from '../pages/FollowersPage';
 import FollowingsPage from '../pages/FollowingsPage';
+import SettingsPage from '../pages/SettingsPage';
+import ChangePasswordPage from '../pages/ChangePasswordPage';
+import ChangeLanguagePage from '../pages/ChangeLanguagePage';
+import UserReviewsPage from '../pages/UserReviewsPage';
 
 
 const navOptionsHandler = (navigation) => ({
@@ -86,12 +90,28 @@ const MainStack = createStackNavigator({
         screen: CategoryRestaurantsPage,
         navigationOptions: navOptionsHandler,
     },
+    UserReviews: {
+        screen: UserReviewsPage,
+        navigationOptions: navOptionsHandler,
+    },
     Followers: {
         screen: FollowersPage,
         navigationOptions: navOptionsHandler,
     },
     Followings: {
         screen: FollowingsPage,
+        navigationOptions: navOptionsHandler,
+    },
+    Settings: {
+        screen: SettingsPage,
+        navigationOptions: navOptionsHandler,
+    },
+    ChangePassword: {
+        screen: ChangePasswordPage,
+        navigationOptions: navOptionsHandler,
+    },
+    ChangeLanguage: {
+        screen: ChangeLanguagePage,
         navigationOptions: navOptionsHandler,
     },
 });

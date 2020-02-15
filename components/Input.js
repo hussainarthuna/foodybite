@@ -20,7 +20,7 @@ const Input = props => {
 
 const styles = StyleSheet.create({
     inputContainer: {
-        width: '80%',
+        width: '90%',
         backgroundColor: 'grey',
         opacity: 0.6,
         borderRadius: 8,
